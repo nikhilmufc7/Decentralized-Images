@@ -1,5 +1,5 @@
 {
-  "name": "app_name",
+  "name": "",
   "version": "0.0.1",
   "description": "",
   "main": "Gruntfile.js",
@@ -9,6 +9,5 @@
   "author": "",
   "license": "ISC",
   "homepage": "",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
