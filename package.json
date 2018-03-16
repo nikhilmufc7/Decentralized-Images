@@ -1,0 +1,26 @@
+{
+  "name": "blockchainimages",
+  "version": "1.0.0",
+  "description": "Built on ethereum and solidity",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "depends": "npm install -g ethereumjs-testrpc embark ipfs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilmufc7/imageMarketplace.git"
+  },
+  "author": "Nikhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhilmufc7/imageMarketplace/issues"
+  },
+  "homepage": "https://github.com/nikhilmufc7/imageMarketplace#readme",
+  "dependencies": {
+    "dirty-chai": "^2.0.1"
+  },
+  "devDependencies": {
+    "install-peers": "^1.0.2"
+  }
+}
