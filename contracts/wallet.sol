@@ -1,27 +1,6 @@
 pragma solidity ^0.4.18;
 
-contract owned{
-    address owner;
-    modifier onlyowner(){
-        if(msg.sender==owner){
-            _;
-        }
-    }
-    function owned() public{
-        owner=msg.sender;
-    }
-}
-
-contract mortal is owned {
-    function kill() public{
-        if(msg.sender==owner){
-            selfdestruct(owner);
-        }
-    }
-}
-
-
-contract MyWallet is mortal {
+contract MyWallet{
     address creator;
     
     struct photographers{
@@ -49,11 +28,10 @@ contract MyWallet is mortal {
     mapping(uint256 => proposal) m_proposals;
     event receivedFunds(address indexed _from,uint256 indexed _amount);
     event imgUploaded(address indexed _from,uint256 indexed _price, string indexed _hash);
-    event proposalReceived(address indexed _from, address indexed _to, uint256 proposal_id);
+    event imgBought(address indexed _by, address indexed _of, uint256 downloads_owner);
 
     uint256 img_ctr;
     uint256 proposal_ctr;
-    uint256 download_ctr;
     
     function MyWallet() public{
         creator=msg.sender;
@@ -71,6 +49,9 @@ contract MyWallet is mortal {
     
     function buyImage(string _hash) public returns(address){
         address author_add=author_photo[_hash];
+        uint256 m_downloads=downloads[author_add];
+        m_downloads+=1;
+        downloads[author_add]=m_downloads;
         if(author_add!=address(0)){
         return (author_add ); }// for direct pay
         else{
@@ -78,17 +59,16 @@ contract MyWallet is mortal {
         }
         
     }
-    function sendMoneyToAuthors(address _to, uint256 sales)public {
-        
-        
-    } 
      
     function get_total_images() public returns(uint256){
         return img_ctr;
     }
     function get_downloads() public returns(uint256){
-        return download_ctr;
+        uint256 m_downloads=downloads[msg.sender];
+        return m_downloads;
     }
+    
+    
     
     function() payable public {
         if (msg.value>0) {
