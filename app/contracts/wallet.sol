@@ -49,10 +49,11 @@ contract MyWallet{
     
     function buyImage(string _hash) public returns(address){
         address author_add=author_photo[_hash];
+        if(author_add!=address(0)){
         uint256 m_downloads=downloads[author_add];
         m_downloads+=1;
         downloads[author_add]=m_downloads;
-        if(author_add!=address(0)){
+        emit imgBought(msg.sender, author_add, m_downloads); //showing no of downloads of later
         return (author_add ); }// for direct pay
         else{
             revert();
@@ -69,7 +70,7 @@ contract MyWallet{
     }
     
     
-    
+    //updated
     function() payable public {
         if (msg.value>0) {
             emit receivedFunds(msg.sender, msg.value);
