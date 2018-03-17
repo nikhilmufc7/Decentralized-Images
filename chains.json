@@ -25,5 +25,23 @@
       }
     },
     "name": "development"
+  },
+  "0x5e9f39b75f178602376db6c3656230df247a69782f9afc3b6028c5ef8296da73": {
+    "contracts": {
+      "0x42d970ab0d1c104d23a3fa2816b9689754c6b882ae039a4fd7cb14dde29add51": {
+        "name": "SimpleStorage",
+        "address": "0x441661380cf7e062bc8aafe8b58e8683633142da"
+      }
+    },
+    "name": "development"
+  },
+  "0x0cba639dcd09da52fc6b00fb8e2ad0388e257cbc964234149b9d335b200f2e5c": {
+    "contracts": {
+      "0x42d970ab0d1c104d23a3fa2816b9689754c6b882ae039a4fd7cb14dde29add51": {
+        "name": "SimpleStorage",
+        "address": "0x028d1e253c0eac76191fe59d472f7e08ebcc478e"
+      }
+    },
+    "name": "development"
   }
 }
