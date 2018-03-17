@@ -7,5 +7,23 @@
       }
     },
     "name": "development"
+  },
+  "0x913c9ae573820d41e0c15450a173cfe4b8bbf8d59d0bfe6eb304035bca5b9c1d": {
+    "contracts": {
+      "0x42d970ab0d1c104d23a3fa2816b9689754c6b882ae039a4fd7cb14dde29add51": {
+        "name": "SimpleStorage",
+        "address": "0x8245b77b17cf3ad6ebcce3df32134f8876e0690a"
+      }
+    },
+    "name": "development"
+  },
+  "0x6a528582ba5fdeb2e6b535daee156e6ccf6bc82d0f6e4d643497cdc977a6e17f": {
+    "contracts": {
+      "0x42d970ab0d1c104d23a3fa2816b9689754c6b882ae039a4fd7cb14dde29add51": {
+        "name": "SimpleStorage",
+        "address": "0x28d95c03a7aaf2eb814454ce7d26751ed87a4e67"
+      }
+    },
+    "name": "development"
   }
 }
