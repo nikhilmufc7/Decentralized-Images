@@ -1,3 +1,4 @@
 node_modules/
 dist/
 .embark/
+package-lock.json/
