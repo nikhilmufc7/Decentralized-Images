@@ -71,13 +71,6 @@ function calculate() {
   calculateMD5Hash(file, bufferSize).then(
     function(result) {
        console.log(result);
-    },
-    function(err) {
-
-    },
-    function(progress) {
-
-      console.log(progress.currentPart, 'of', progress.totalParts, 'Total bytes:', progress.currentPart * bufferSize, 'of', progress.totalParts * bufferSize);
     });
 }
 </script>
